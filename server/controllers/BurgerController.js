@@ -30,4 +30,8 @@ export class BurgerController extends BaseController {
     const burger = await burgerService.EditBurger(id, updatedBurger)
     return res.send({ message: 'ARE YOU HAPPY NOW OR DO YOU WANNA CHANGE ANYTHING ELSE', results: burger })
   }
+
+  async DeleteBurger(req, res, next) {
+    return res.send({ message: 'no', results: req.body })
+  }
 }
